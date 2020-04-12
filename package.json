@@ -8,6 +8,9 @@
 		"npm-package-json-lint-config"
 	],
 	"homepage": "https://github.com/stylelint/npm-package-json-lint-config/tree/master/packages/npm-package-json-lint-config#readme",
+	"bugs": {
+		"url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/stylelint/npm-package-json-lint-config.git"
@@ -16,29 +19,25 @@
 		"type": "opencollective",
 		"url": "https://opencollective.com/stylelint"
 	},
-	"bugs": {
-		"url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
-	},
 	"license": "MIT",
 	"author": "stylelint",
 	"main": "lib/npm-package-json-lint-config.js",
-	"files": [
-		"lib/npm-package-json-lint-config.js"
-	],
 	"directories": {
 		"lib": "lib"
 	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"engines": {
-		"node": "^12",
-		"npm": "^6"
-	},
-	"eslintConfig": {
-		"extends": [
-			"stylelint"
-		]
+	"files": [
+		"lib/npm-package-json-lint-config.js"
+	],
+	"scripts": {
+		"format": "prettier . --write",
+		"jest": "jest",
+		"lint": "npm-run-all --parallel lint:*",
+		"lint:formatting": "prettier . --check --ignore-path .prettierignore",
+		"lint:js": "eslint . --ignore-path .gitignore --fix",
+		"lint:packagejson": "npmPkgJsonLint .",
+		"release": "np",
+		"pretest": "npm run lint",
+		"test": "jest"
 	},
 	"husky": {
 		"hooks": {
@@ -49,11 +48,6 @@
 		"*.js": "eslint --cache --fix",
 		"*.{js,json,md,yml}": "prettier --write"
 	},
-	"npmpackagejsonlint": {
-		"extends": [
-			"./lib/npm-package-json-lint-config.js"
-		]
-	},
 	"prettier": {
 		"arrowParens": "always",
 		"endOfLine": "lf",
@@ -61,6 +55,11 @@
 		"singleQuote": true,
 		"trailingComma": "all",
 		"useTabs": true
+	},
+	"eslintConfig": {
+		"extends": [
+			"stylelint"
+		]
 	},
 	"dependencies": {
 		"npm-package-json-lint": "^4.6.0",
@@ -78,15 +77,16 @@
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.0.4"
 	},
-	"scripts": {
-		"format": "prettier . --write",
-		"jest": "jest",
-		"lint": "npm-run-all --parallel lint:*",
-		"lint:formatting": "prettier . --check --ignore-path .prettierignore",
-		"lint:js": "eslint . --ignore-path .gitignore --fix",
-		"lint:packagejson": "npmPkgJsonLint .",
-		"pretest": "npm run lint",
-		"release": "np",
-		"test": "jest"
+	"engines": {
+		"node": "^12",
+		"npm": "^6"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"npmpackagejsonlint": {
+		"extends": [
+			"./lib/npm-package-json-lint-config.js"
+		]
 	}
 }
