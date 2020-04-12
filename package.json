@@ -1,0 +1,92 @@
+{
+	"name": "@stylelint/npm-package-json-lint-config",
+	"version": "1.0.0",
+	"description": "A stylelint shareable config for npm-package-json-lint.",
+	"keywords": [
+		"@stylelint",
+		"npm-package-json-lint",
+		"npm-package-json-lint-config"
+	],
+	"homepage": "https://github.com/stylelint/npm-package-json-lint-config/tree/master/packages/npm-package-json-lint-config#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stylelint/npm-package-json-lint-config.git"
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/stylelint"
+	},
+	"bugs": {
+		"url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
+	},
+	"license": "MIT",
+	"author": "stylelint",
+	"main": "lib/npm-package-json-lint-config.js",
+	"files": [
+		"lib/npm-package-json-lint-config.js"
+	],
+	"directories": {
+		"lib": "lib"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"engines": {
+		"node": "^12",
+		"npm": "^6"
+	},
+	"eslintConfig": {
+		"extends": [
+			"stylelint"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": "eslint --cache --fix",
+		"*.{js,json,md,yml}": "prettier --write"
+	},
+	"npmpackagejsonlint": {
+		"extends": [
+			"./lib/npm-package-json-lint-config.js"
+		]
+	},
+	"prettier": {
+		"arrowParens": "always",
+		"endOfLine": "lf",
+		"printWidth": 100,
+		"singleQuote": true,
+		"trailingComma": "all",
+		"useTabs": true
+	},
+	"dependencies": {
+		"npm-package-json-lint": "^4.6.0",
+		"npm-package-json-lint-config-default": "^2.0.0"
+	},
+	"devDependencies": {
+		"@stylelint/prettier-config": "^2.0.0",
+		"eslint": "^6.8.0",
+		"eslint-config-stylelint": "^12.0.0",
+		"husky": "^4.2.5",
+		"is-plain-obj": "^2.1.0",
+		"jest": "^25.3.0",
+		"lint-staged": "^10.1.3",
+		"np": "^6.2.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.0.4"
+	},
+	"scripts": {
+		"format": "prettier . --write",
+		"jest": "jest",
+		"lint": "npm-run-all --parallel lint:*",
+		"lint:formatting": "prettier . --check --ignore-path .prettierignore",
+		"lint:js": "eslint . --ignore-path .gitignore --fix",
+		"lint:packagejson": "npmPkgJsonLint .",
+		"pretest": "npm run lint",
+		"release": "np",
+		"test": "jest"
+	}
+}
