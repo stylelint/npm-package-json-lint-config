@@ -7,10 +7,6 @@
 		"npm-package-json-lint",
 		"npm-package-json-lint-config"
 	],
-	"homepage": "https://github.com/stylelint/npm-package-json-lint-config/tree/master/packages/npm-package-json-lint-config#readme",
-	"bugs": {
-		"url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/stylelint/npm-package-json-lint-config.git"
