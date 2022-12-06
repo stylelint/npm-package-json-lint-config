@@ -3,39 +3,16 @@ name: CI
 on:
   push:
     branches:
-      - master
-      - 'dependabot/**'
+      - main
   pull_request:
     branches:
       - '**'
 
-env:
-  CI: true
-
 jobs:
   lint:
-    name: Test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
+    uses: stylelint/.github/.github/workflows/lint.yml@main
 
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node: [12]
-        os: [ubuntu-latest]
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install latest npm
-        run: npm install --global npm@latest
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Test
-        run: npm run test
+  test:
+    uses: stylelint/.github/.github/workflows/test.yml@main
+    with:
+      node-version: '["12", "14", "16", "18"]'
