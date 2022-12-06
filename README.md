@@ -1,6 +1,7 @@
 # @stylelint/npm-package-json-lint-config
 
-[![NPM version](https://img.shields.io/npm/v/@stylelint/npm-package-json-lint-config.svg)](https://www.npmjs.org/package/@stylelint/npm-package-json-lint-config) [![Build Status](https://github.com/stylelint/npm-package-json-lint-config/workflows/CI/badge.svg)](https://github.com/stylelint/npm-package-json-lint-config/actions)
+[![NPM version](https://img.shields.io/npm/v/@stylelint/npm-package-json-lint-config.svg)](https://www.npmjs.org/package/@stylelint/npm-package-json-lint-config)
+[![CI](https://github.com/stylelint/npm-package-json-lint-config/actions/workflows/nodejs.yml/badge.svg)](https://github.com/stylelint/npm-package-json-lint-config/actions/workflows/nodejs.yml)
 
 > stylelint org's shareable config for npm-package-json-lint-config.
 
