@@ -19,7 +19,7 @@ Add this to your `package.json`:
 
 ```json
 {
-	"npmpackagejsonlint": "@stylelint/npm-package-json-lint-config"
+  "npmpackagejsonlint": "@stylelint/npm-package-json-lint-config"
 }
 ```
 
