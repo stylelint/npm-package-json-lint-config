@@ -1,3 +1,10 @@
+## 3.0.0
+
+- Remove Node.js 12 support.
+- Remove redundant sorting rules for deps.
+- Bump `npm-package-json-lint` to `^6.4.0`.
+- Bump `npm-package-json-lint-config-default` to `^5.0.0`.
+
 ## 2.0.0
 
 - Add `require-funding` rule.
