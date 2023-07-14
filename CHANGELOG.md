@@ -1,3 +1,9 @@
+## Head
+
+- Remove Node.js 14 support.
+- Bump `npm-package-json-lint` to `^7.0.0`.
+- Bump `npm-package-json-lint-config-default` to `^6.0.0`.
+
 ## 3.0.0
 
 - Remove Node.js 12 support.
