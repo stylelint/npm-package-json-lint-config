@@ -1,4 +1,4 @@
-## Head
+## 4.0.0
 
 - Remove Node.js 14 support.
 - Bump `npm-package-json-lint` to `^7.0.0`.
