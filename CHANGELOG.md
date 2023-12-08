@@ -3,6 +3,7 @@
 ## Head
 
 - Removed: Node.js less than 18.12.0 support.
+- Changed: `npm-package-json-lint` to a peer dependency.
 
 ## 4.0.0
 
