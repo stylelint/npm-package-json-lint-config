@@ -23,7 +23,7 @@
     "format": "prettier . --write",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
-    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint:js": "eslint . --ignore-path .gitignore --ext .js,.mjs",
     "lint:packagejson": "npmPkgJsonLint .",
     "prepare": "husky install",
     "release": "np",
@@ -31,8 +31,8 @@
     "test": "node --test"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,json,md,yml}": "prettier --write"
+    "*.{js,mjs}": "eslint --cache --fix",
+    "*.{js,mjs,json,md,yml}": "prettier --write"
   },
   "prettier": "@stylelint/prettier-config",
   "eslintConfig": {
