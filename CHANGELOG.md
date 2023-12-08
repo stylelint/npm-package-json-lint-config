@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.1
+
+- Fixed: `require-main` to be disabled.
+
 ## 5.0.0
 
 - Removed: Node.js less than 18.12.0 support.
