@@ -16,11 +16,11 @@
   "author": "stylelint",
   "main": "lib/npm-package-json-lint-config.js",
   "files": [
-    "lib"
+    "lib",
+    "!**/*.test.*"
   ],
   "scripts": {
     "format": "prettier . --write",
-    "jest": "jest",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint . --ignore-path .gitignore",
@@ -28,7 +28,7 @@
     "prepare": "husky install",
     "release": "np",
     "pretest": "npm run lint",
-    "test": "jest"
+    "test": "node --test"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
@@ -68,7 +68,6 @@
     "eslint": "^8.44.0",
     "eslint-config-stylelint": "^19.0.0",
     "husky": "^8.0.3",
-    "jest": "^29.6.1",
     "lint-staged": "^13.2.3",
     "np": "^8.0.4",
     "npm-package-json-lint": "^7.0.0",
