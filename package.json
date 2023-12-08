@@ -3,14 +3,11 @@
   "version": "4.0.0",
   "description": "A stylelint shareable config for npm-package-json-lint.",
   "keywords": [
-    "@stylelint",
+    "stylelint",
     "npm-package-json-lint",
     "npm-package-json-lint-config"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stylelint/npm-package-json-lint-config.git"
-  },
+  "repository": "stylelint/npm-package-json-lint-config",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stylelint"
@@ -18,17 +15,14 @@
   "license": "MIT",
   "author": "stylelint",
   "main": "lib/npm-package-json-lint-config.js",
-  "directories": {
-    "lib": "lib"
-  },
   "files": [
-    "lib/npm-package-json-lint-config.js"
+    "lib"
   ],
   "scripts": {
     "format": "prettier . --write",
     "jest": "jest",
     "lint": "npm-run-all --parallel lint:*",
-    "lint:formatting": "prettier . --check --ignore-path .prettierignore",
+    "lint:formatting": "prettier . --check",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint:packagejson": "npmPkgJsonLint .",
     "prepare": "husky install",
