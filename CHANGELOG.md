@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 5.0.0
 
 - Removed: Node.js less than 18.12.0 support.
 - Changed: `npm-package-json-lint` to a peer dependency.
