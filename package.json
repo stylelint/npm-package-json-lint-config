@@ -26,7 +26,7 @@
     "lint:js": "eslint . --ignore-path .gitignore --ext .js,.mjs",
     "lint:packagejson": "npmPkgJsonLint .",
     "prepare": "husky install",
-    "release": "np",
+    "release": "np --no-release-draft",
     "pretest": "npm run lint",
     "test": "node --test"
   },
