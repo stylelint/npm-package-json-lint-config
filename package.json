@@ -25,7 +25,7 @@
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint . --ignore-path .gitignore --ext .js,.mjs",
     "lint:packagejson": "npmPkgJsonLint .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "np --no-release-draft",
     "pretest": "npm run lint",
     "test": "node --test"
