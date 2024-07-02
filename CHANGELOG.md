@@ -4,6 +4,7 @@
 
 - Changed: bump `npm-package-json-lint` to `^8.0.0`.
 - Changed: bump `npm-package-json-lint-config-default` to `^7.0.0`.
+- Fixed: missing GitHub Sponsor to `funding` field in `package.json`.
 
 ## 5.0.1
 

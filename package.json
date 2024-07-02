@@ -8,10 +8,16 @@
     "npm-package-json-lint-config"
   ],
   "repository": "stylelint/npm-package-json-lint-config",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/stylelint"
-  },
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/stylelint"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/stylelint"
+    }
+  ],
   "license": "MIT",
   "author": "stylelint",
   "main": "lib/npm-package-json-lint-config.js",
