@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 5.1.0
 
 - Changed: bump `npm-package-json-lint` to `^8.0.0`.
 - Changed: bump `npm-package-json-lint-config-default` to `^7.0.0`.
