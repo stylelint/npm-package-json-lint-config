@@ -13,7 +13,7 @@ updates:
         dependency-type: 'development'
         exclude-patterns: ['npm-package-json-lint', 'eslint', 'eslint-*']
       npm-package-json-lint:
-        patterns: ['npm-package-json-lint']
+        patterns: ['npm-package-json-lint', 'npm-package-json-lint-*']
 
   - package-ecosystem: github-actions
     directory: '/'
