@@ -9,8 +9,8 @@ updates:
     labels:
       - 'pr: dependencies'
     groups:
-      development-dependencies:
-        dependency-type: 'development'
+      dev-deps:
+        dependency-type: development
         exclude-patterns: ['npm-package-json-lint']
       npm-package-json-lint:
         patterns: ['npm-package-json-lint', 'npm-package-json-lint-*']
