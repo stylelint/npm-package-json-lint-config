@@ -8,11 +8,11 @@ on:
 
 jobs:
   lint:
-    uses: stylelint/.github/.github/workflows/lint.yml@3002601b682d04de7f3de381287b9ca0404786c8 # main
+    uses: stylelint/.github/.github/workflows/call-lint.yml@3002601b682d04de7f3de381287b9ca0404786c8 # 0.3.0
     permissions:
       contents: read
 
   test:
-    uses: stylelint/.github/.github/workflows/test.yml@3002601b682d04de7f3de381287b9ca0404786c8 # main
+    uses: stylelint/.github/.github/workflows/call-test.yml@3002601b682d04de7f3de381287b9ca0404786c8 # 0.3.0
     permissions:
       contents: read
