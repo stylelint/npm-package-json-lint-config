@@ -61,7 +61,7 @@
     "npm-package-json-lint": "^10.4.0"
   },
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=22.0.0"
   },
   "publishConfig": {
     "access": "public"
