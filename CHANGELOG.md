@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-Removed: Node.js less than `22.0.0` support.
+- Removed: Node.js less than `22.0.0` support.
+- Changed: migrate to ESM.
 
 ## 5.1.0
 
