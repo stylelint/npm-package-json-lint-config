@@ -20,7 +20,11 @@
   ],
   "license": "MIT",
   "author": "stylelint",
-  "main": "lib/npm-package-json-lint-config.js",
+  "type": "module",
+  "exports": {
+    "require": "./lib/npm-package-json-lint-config.cjs",
+    "default": "./lib/npm-package-json-lint-config.js"
+  },
   "files": [
     "lib",
     "!**/*.test.*"
@@ -30,21 +34,16 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint",
-    "lint:packagejson": "npmPkgJsonLint .",
+    "lint:packagejson": "npmPkgJsonLint --configFile lib/npm-package-json-lint-config.cjs .",
     "prepare": "git config set --local core.hooksPath .githooks || true",
     "pretest": "npm run lint",
     "test": "node --test"
   },
   "lint-staged": {
-    "*.{js,mjs}": "eslint --cache --fix",
-    "*.{js,mjs,json,md,yml}": "prettier --write"
+    "*.js": "eslint --cache --fix",
+    "*.{js,json,md,yml}": "prettier --write"
   },
   "prettier": "@stylelint/prettier-config",
-  "npmpackagejsonlint": {
-    "extends": [
-      "./lib/npm-package-json-lint-config.js"
-    ]
-  },
   "dependencies": {
     "npm-package-json-lint-config-default": "^9.0.1"
   },
