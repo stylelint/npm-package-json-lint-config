@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+Removed: Node.js less than `22.0.0` support.
+
 ## 5.1.0
 
 - Changed: bump `npm-package-json-lint` to `^8.0.0`.
@@ -12,7 +16,7 @@
 
 ## 5.0.0
 
-- Removed: Node.js less than 18.12.0 support.
+- Removed: Node.js less than `18.12.0` support.
 - Changed: `npm-package-json-lint` to a peer dependency.
 
 ## 4.0.0
@@ -32,8 +36,8 @@
 
 - Added: `require-funding` rule.
 - Removed: `require-bugs` and `require-homepage` rules.
-- Changed: bump `npm-package-json-lint-config-default` to v3.0.0.
-- Changed: bump `npm-package-json-lint` to v5.0.0.
+- Changed: bump `npm-package-json-lint` to `^5.0.0`.
+- Changed: bump `npm-package-json-lint-config-default` to `^3.0.0`.
 
 ## 1.1.0
 
