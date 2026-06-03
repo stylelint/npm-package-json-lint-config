@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
+## 6.0.0
 
 - Removed: Node.js less than `22.0.0` support.
+- Changed: bump `npm-package-json-lint` to `^10.4.0`.
+- Changed: bump `npm-package-json-lint-config-default` to `^9.0.1`.
 - Changed: migrate to ESM.
 
 ## 5.1.0
