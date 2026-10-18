@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.0.0
+
+- Changed: bump `npm-package-json-lint` to `^11.0.0`.
+- Changed: bump `npm-package-json-lint-config-default` to `^10.0.0`.
+
 ## 6.0.0
 
 - Removed: Node.js less than `22.0.0` support.
